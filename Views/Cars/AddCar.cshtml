@@ -1,0 +1,43 @@
+﻿@model AddCarFormModel
+
+
+<div class="container">
+    <div class="row">
+        <div class="offset-md-2 col-md-8 com-sm-12 mb-5">
+            <h2 class="heading-margin" text-center>Add Car</h2>
+            <form method="post">
+                <div class="form-group">
+                    <label asp-for="Make">Make</label>
+                    <input asp-for="Make" class="form-control" placeholder="Add make name...">
+                    <span required asp-validation-for="Make" class="small text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Model">Model</label>
+                    <input required asp-for="Model" class="form-control" placeholder="Add model name...">
+                    <span asp-validation-for="Model" class="small text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="LicensePlate">License Plate</label>
+                    <input required asp-for="LicensePlate" class="form-control" placeholder="Add licence plate...">
+                    <span asp-validation-for="LicensePlate" class="small text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Color">Color</label>
+                    <input required asp-for="Color" class="form-control" placeholder="Add car color...">
+                    <span asp-validation-for="Color" class="small text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="EngineCubature">Engine Cubature</label>
+                    <input min="1" max="50" required asp-for="EngineCubature" class="form-control" placeholder="Add engine cubature...">
+                    <span asp-validation-for="EngineCubature" class="small text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="HorsePower">Horse Power</label>
+                    <input min="1" max="1200" required asp-for="HorsePower" class="form-control" placeholder="Add horse power...">
+                    <span asp-validation-for="HorsePower" class="small text-danger"></span>
+                </div>
+                <button type="submit" class="btn btn-primary" value="Add">Add</button>
+            </form>
+        </div>
+    </div>
+</div>
